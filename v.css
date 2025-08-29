@@ -1,0 +1,237 @@
+
+body {
+  background-color: #0a0a0a; 
+  color: #e5e5e5;          
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+#container {
+  display: grid;
+  grid-template-rows: auto 60vh 15vh 40vh auto;
+  grid-template-areas: 
+    "cabecalho"
+    "meio"
+    "texto"
+    "rodape"
+    "conntain";
+  gap: 10px;
+}
+
+#cabecalho {
+  grid-area: cabecalho;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c; 
+  padding: 5px;
+}
+#cabecalho img {
+  max-height: 50px;
+  width: auto;
+}
+
+
+#meio {
+  grid-area: meio;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  background-color: #111111;
+  box-shadow: 0 -4px 6px rgba(243, 242, 242, 0.5);
+  border-radius: 8px;
+}
+#meio img {
+  width: 80%;        
+  max-width: 800px;   
+  height: 100%;       
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+
+#texto {
+  grid-area: texto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a3a2c;
+  color: #f5f5f5;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+#rodape {
+  grid-area: rodape;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "mtabaixo"
+    "pers";
+  background-color: #0f0f0f;
+  gap: 10px;
+}
+
+#mtabaixo {
+  grid-area: mtabaixo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #222222;
+  padding: 20px 0;
+}
+#trovao, #relampago {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+#trovao {
+  background-color: #d9a200; 
+}
+#relampago {
+  background-color: #1db954; 
+}
+#trovao img, #relampago img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#trovao p, #relampago p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+
+#pers {
+  grid-area: pers;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  background-color: #111111;
+}
+#blocofoto {
+  width: 100px;
+  height: 100%;
+  background-color: #3a6ea5;
+}
+#escrito {
+  flex: 1;
+  background-color: #4caf50; 
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#conntain {
+ margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+#losgrandes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color:#0a0a0a;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cya {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  background-color: #555555; 
+  border-radius: 5px;
+  overflow: hidden;
+  
+}
+
+
+.cya img {
+  width: 100%;        
+  height: 100%;        
+  display: block;
+  object-fit: cover;  
+  border-radius: 5px;
+}
+
+
+
+@media (max-width: 1024px) {
+  #container {
+    grid-template-rows: auto 50vh auto auto auto;
+  }
+  #meio img {
+    width: 95%;
+  }
+  #conntain {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #meio {
+    padding: 10px;
+  }
+  #texto {
+    font-size: 16px;
+    padding: 10px;
+  }
+  #mtabaixo {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #trovao, #relampago {
+    width: 120px;
+    height: 120px;
+  }
+  #pers {
+    flex-direction: column;
+    text-align: center;
+  }
+  #blocofoto {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #cabecalho img {
+    max-height: 45px;
+  }
+  #texto {
+    font-size: 14px;
+  }
+  #trovao, #relampago {
+    width: 100px;
+    height: 100px;
+  }
+  .cya {
+    width: 100%;
+    height: auto;
+  }
+  #escrito {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

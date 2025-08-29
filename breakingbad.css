@@ -1,0 +1,110 @@
+
+#cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c; 
+  padding: 5px;
+  margin-bottom: 10px;
+
+}
+
+#cabecalho img {
+  max-height: 50px; 
+  width: auto;
+}
+
+
+
+
+#nothinking {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 70px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: black;
+  color: #91a091;
+}
+
+#section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: black;
+  padding: 20px;
+}
+
+#firstmd {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.mygrantmd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 137px;
+  border-radius: 10px;
+  background-color:  #4caf50;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+.mygrantmd img{
+    height: 100%;
+    width: 100%;
+}
+
+#secondmd {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  font-size: 20px;
+  color: white;
+}
+
+.yam {
+  color: white;
+  font-size: 20px;
+}
+
+#midnight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+}
+#midnight img{
+    height: 100%;
+
+
+}
+#amanheceu{
+    background: #1c1c1c;
+  color: #ffffff;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: left;
+ 
+}
+
+@media (max-width: 800px) {
+  #firstmd {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .mygrantmd {
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+  }
+}
